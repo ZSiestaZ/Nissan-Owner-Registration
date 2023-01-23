@@ -1,0 +1,385 @@
+
+
+
+@font-face {
+    font-family: 'db_futhaira_body_xmed';
+    src: url('../font/db_futhaira_body_x_med_v3.2-webfont.woff2') format('woff2'),
+         url('../font/db_futhaira_body_x_med_v3.2-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+.input-group .form-control {
+    font-size: 20px !important;
+    padding-left: 1px !important;
+    color: #fff !important;
+}
+span.uptx {
+    text-transform: uppercase;
+    font-size: 18px;
+}
+h1, h2, .h2{
+            font-family: 'Kanit', sans-serif !important;
+            line-height: 1.6em;
+        }
+label{
+    font-size: 1.6em;
+    display: block;
+}
+
+label { width:100%; }
+span.nissanlogo img,.nissanhd img { width:100%; }
+.bottomtag { margin-bottom: 40px;}
+body {
+    background: #9A1F33 url(../images/nissan-bg-bottom.png) no-repeat center bottom;background-size: 100%;
+    font-family: 'db_futhaira_body_xmed';
+}
+span.nissanlogo {
+    width: 100%;
+    margin: 0 auto;
+    display: block;
+    text-align: center;
+    padding-top: 30px;
+}
+span.nissanhd {
+    color: #fff;
+    font-size: 26px;
+    text-align: center;
+    width: 100%;
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+span.nissansub {
+    color: #fff;
+    text-align: center;
+    display: block;
+    font-size: 14px;
+}
+.nissanwhite {
+    background: #fff;
+    padding: 7vw;
+    margin: 15px 7vw 7vw 7vw;
+    border-radius: 7px;
+}
+.gform_wrapper .gfield_required {
+    display: none;
+}
+label { margin-bottom:15px; margin-top:10px; }
+input.fullform {
+    background: transparent !important;
+    border: 0;
+    border-bottom: 1px solid #fff !important;
+    padding-left: 0 !important;
+    border-radius: 0 !important;
+    width: 100%;
+    color: #fff;
+    font-size: 20px;
+    height: 40px;
+    outline: 0;
+}
+label.name-label ,
+label.surname-label ,
+label.phone-label ,
+label.email-label,
+label.address-label,
+label.province-label,
+label.district-label,
+label.postcode-label,
+label.id-label,
+label.date-label,
+label.model-label,
+label.sub-district-label {
+    background-size: 100%;
+    font-size: 24px !important;
+    height: 35px;
+    padding-bottom: 5px !important;
+    display: block !important;
+    background-position: -5px;
+    color: #fff !important;
+}
+span.errortx {
+    color: #fff;
+}
+div.modelbox{ position:relative; width:100%; margin-top: 15px;}
+div.model {
+    background: url(../images/nissan-pleaseselect2.png) no-repeat left center !important;
+    background-size: 168px !important;
+    font-size: 0 !important;
+    height: 35px;
+    padding-bottom: 5px !important;
+    display: block !important;
+    background-position: 0;
+    position: absolute;
+    top: 0;
+    width: 167px;
+    border: 0;
+        left: 130px;
+    outline: 0;
+}
+select {
+    appearance: none;
+}
+.select-model { background:transparent; border:0 ;
+    background: transparent;
+    border: 0;
+    width: 163px;
+    height: 35px;
+    font-size: 16px;
+    padding-top: 0px;
+    padding-left: 9px;
+    outline: 0;
+    color: #7181a1;
+}
+.province-select,
+.district-select {
+    background: url(../images/selectbg.png) no-repeat left center !important;
+    color: #fff;
+    padding-left: 7px;
+    background-size: 100% !important;
+    font-size: 20px !important;
+    height: 49px;
+    border: 0;
+    border-bottom: 1px solid #fff !important;
+    padding-bottom: 5px !important;
+    display: block !important;
+    background-position: 0;
+    border-radius: 0;
+    width: 100%;
+    outline: 0;
+}
+
+.uk-padding {
+    padding: 0 !important;
+}
+
+.uk-grid {
+    margin-left: 0;
+}
+.uk-grid + .uk-grid, .uk-grid > .uk-grid-margin, * + .uk-grid-margin {
+    margin-top: 0;
+}
+.uk-grid > * {
+    padding-left: 0;
+}
+.uk-input, .uk-select, .uk-textarea {
+    border: 0;
+    border-bottom: 1px solid #fff;
+    background: transparent !important;
+    font-size: 20px;
+    color: #fff;
+}
+.uk-input:focus, .uk-select:focus, .uk-textarea:focus {
+    color: #fff;
+    font-size: 20px;
+    border-color: #fff;
+}
+.error ,.error2{color: #fff;}
+.error.true ,.error2.true { display:none; }
+
+.form-group.required.uk-grid-margin.uk-first-column {
+    width: 100%;
+}
+.form-control[disabled], .form-control[readonly], fieldset[disabled] .form-control {
+    background-color: transparent !important;
+    opacity: 1 !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    border-bottom: 1px solid #fff !important;
+    font-size: 20px !important;
+    color: #fff !important;
+    padding-left: 5px !important;
+}
+.input-group-addon {
+    background-color: transparent !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    border-bottom: 1px solid #fff !important;
+}
+.form-control:focus {
+    
+    -webkit-box-shadow: inset 0 1px 1px rgb(0 0 0 / 0%), 0 0 8px rgb(102 175 233 / 0%);
+    box-shadow: inset 0 1px 1px rgb(0 0 0 / 0%), 0 0 8px rgb(102 175 233 / 0%);
+}
+.glyphicon-calendar:before {
+    font-size: 0;
+    background: url(../images/calendar.png) no-repeat !important;
+        width: 20px;
+    height: 20px;
+    background-size: 20px !important;
+    display: inline-block;
+    float: left;
+}
+.input-group-addon {
+    padding-top: 0;
+    margin-top: 0px;
+}
+.form-control {
+    border: 0 !important;
+    background: transparent !important;
+    border-bottom: 1px solid #fff !important;
+}
+.input-group .form-control {
+    border-radius: 0 !important;
+}
+
+button[disabled] {
+    opacity: 0.5;
+}
+
+b{
+
+    color: white;
+    font-family: 'Kanit', sans-serif !important;
+    line-height: 1.6em;
+    font-size: 20px;
+}
+
+.nissanconsentheadtext{
+
+    width: 100%;
+    margin: 0 auto;
+    display: block;
+    text-align: center;
+    padding-top: 30px;
+    margin-bottom: 40px;
+    
+
+}
+
+c{
+
+    color: black;
+    font-family: 'Kanit', sans-serif !important;
+    line-height: 1.6em;
+    font-size: 14px;
+    
+}
+
+.container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 35px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  /* Hide the browser's default checkbox */
+  .container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  
+  /* Create a custom checkbox */
+  .checkmark {
+    position: absolute;
+    top: 5px;
+    left: 0;
+    height: 22px;
+    width: 22px;
+    background-color: #eee;
+  }
+  
+  /* On mouse-over, add a grey background color */
+  .container:hover input ~ .checkmark {
+    background-color: grey;
+  }
+  
+  /* When the checkbox is checked, add a blue background */
+  .container input:checked ~ .checkmark {
+    background-color: #C70032;
+  }
+  
+  /* Create the checkmark/indicator (hidden when not checked) */
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  /* Show the checkmark when checked */
+  .container input:checked ~ .checkmark:after {
+    display: block;
+  }
+  
+  /* Style the checkmark/indicator */
+  .container .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+
+  .consentchackbox{
+
+    padding-top: 30px;
+
+  }
+
+  d{
+
+    color: black;
+    font-family: 'Kanit', sans-serif !important;
+    line-height: 1.6em;
+    font-size: 16px;
+
+}
+
+hr.line {
+    border-bottom: 1px solid rgb(3, 3, 3);
+}
+
+a{
+
+    color: red;
+    font-family: 'Kanit', sans-serif !important;
+    font-size: 20px;
+
+}
+
+.button{
+
+    width: 100%!important;
+    background: #ffffff !important;
+    text-align: center;
+
+}
+
+button#sendform{
+
+    background: #9A1F33 !important;
+    border: 1px solid #9A1F33 !important;
+    width: 55% !important;
+    color: #fff !important;
+    font-size: 20px !important;
+    padding: 10px !important;
+    margin-top: 20px !important;
+    line-height: 20px;
+    
+}
+
+button#backform{
+
+    background: #ffffff !important;
+    border: 1px solid #9A1F33 !important;
+    width: 25% !important;
+    color: #9A1F33 !important;
+    font-size: 20px !important;
+    padding: 10px !important;
+    margin-top: 20px !important;
+    line-height: 20px;
+    
+}
+
