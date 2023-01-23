@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>Nissan Owner Registration</title>
+    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Kanit">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.20/css/uikit.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-datetimepicker.min.css">
+    <link rel="stylesheet" href="css/custom.css">
+    <script src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
+
+</head>
+<body>
+
+  <script>
+
+    var lineUID;
+
+    function runApp() {
+      liff.getProfile().then(profile => {
+
+        lineUID =  profile.userId;
+        
+      }).catch(err => console.error(err));
+    }
+    liff.init({ liffId: "1656660800-kX9bgQr4" }, () => {
+      if (liff.isLoggedIn()) {
+        runApp()
+      } else {
+        liff.login();
+      }
+    }, err => console.error(err.code, error.message));
+  </script>
+   
+    <div class="nissanform">
+        <span class="nissanlogo"><img src="images/nissan-toplogo.png" /></span>
+        <span class="nissanhd"><b>ลงทะเบียนลูกค้านิสสัน</b></span>
+        <span class="nissanhd"><c>"กรุณากรอกข้อมูลให้ถูกต้อง"</c></span>
+        <div class="nissanwhite">
+            <div class="uk-container uk-padding">
+                <form id="my-form" name="form1" class="demo"  action="https://www.audience-iq.com/nissan-owner-registration/consent.html" onsubmit="return validateForm()" method="get" required>
+
+                    <label class="name-label">ชื่อ <span class="uptx">*</span></label>
+                    <input id="firstname" type="text" class="fullform" name="Firstname" placeholder="ชื่อจริง" required oninvalid="this.setCustomValidity('กรุณากรอกชื่อจริง')" oninput="setCustomValidity('')" />
+
+                    <label class="surname-label">นามสกุล <span class="uptx">*</span></label>
+                    <input id="surname" type="text" class="fullform" name="Surname" placeholder="นามสกุล" required oninvalid="this.setCustomValidity('กรุณากรอกนามสกุล')" oninput="setCustomValidity('')" />
+
+                    <label class="phone-label">เบอร์โทรศัพท์ <span class="uptx">*</span></label>
+                    <input id="phone" type="text" class="fullform" name="Phone" placeholder="0811234567" onkeypress="return checkNumber(event)" maxlength="10" required oninvalid="this.setCustomValidity('กรุณากรอกเบอร์โทรศัพท์')" oninput="setCustomValidity('')"  />
+
+                    <label class="id-label">หมายเลขบัตรประชาชน <span class="uptx">*</span></label>
+                    <input type="text" id="idcard" class="fullform" maxlength="13" name="Idcard" onkeypress="return checkNumber(event)" placeholder="122345658959" required oninvalid="this.setCustomValidity('กรุณากรอกหมายเลขบัตรประชาชน')" oninput="setCustomValidity('')" />
+                    <span class="error"></span>
+
+                    <label class="email-label">อีเมล</label>
+                    <input id="email" type="text" class="fullform" name="Email" placeholder="email@domain.com" onchange="ValidateEmail(document.form1.Email)" />
+
+                    <div class="modelbox"><label class="model-label">เลือกปีที่ออกรถ <span class="uptx">*</span></label>
+                      <div class="model">
+                          <select id = "yearcar" class="select-year" name="Yearcar" required oninvalid="this.setCustomValidity('กรุณาเลือกปีที่ออกรถของท่าน')" oninput="setCustomValidity('')">
+                              <option value="" >เลือกปีที่ออกรถ</option>
+                              <option value="2023">2023</option>
+                              <option value="2022">2022</option>
+                              <option value="2021">2021</option>
+                              <option value="2020">2020</option>
+                              <option value="2019">2019</option>
+                              <option value="2018">2018</option>
+                              <option value="2017">2017</option>
+                              <option value="2016">2016</option>
+                              <option value="2015">2015</option>
+                              <option value="2014">2014</option>
+                              <option value="Others">Orthers</option>
+                          </select>
+                      </div>
+                    </div>
+
+                    <input type="text" id="userid" name="UserId" style="display: none;">
+
+                    <button id="sendform" type="submit" onclick="submitForm()">
+                        ลงทะเบียน
+                    </button>
+                </form>
+            </div>
+        </div>
+        <span class="nissanhd bottomtag"><img src="images/nissan-bottomtx.png" /></span>
+    </div>
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>  
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.20/js/uikit.min.js"></script>
+
+    <script>
+
+      function submitForm(){
+
+          document.getElementById("userid").value = lineUID;
+
+          if(typeof(localStorage) != "undefined"){
+
+              localStorage.Firstname = document.getElementById("firstname").value;
+              localStorage.Surname = document.getElementById("surname").value;
+              localStorage.Phone = document.getElementById("phone").value;
+              localStorage.Email = document.getElementById("email").value;
+              localStorage.Idcard = document.getElementById("idcard").value;
+              localStorage.Datecar = document.getElementById("yearcar").value;
+              localStorage.UserId = document.getElementById("userid").value
+          }
+          document.getElementById("form").submit();
+      }
+
+    </script>
+
+    <script type="text/javascript">
+        function validateForm() {
+
+            $('span.surnameerror').removeClass('true').text(' ');
+            $('span.phoneerror').removeClass('true').text(' ');
+            $('span.iderror').removeClass('true').text(' ');
+            $('span.yearmodelerror').removeClass('true').text(' ');
+
+          var a = document.forms["form1"]["firstname"].value;
+          if (a == "") {
+            //alert("Name must be filled out");
+            $('span.nameerror').removeClass('true').text('ข้อมูลจำเป็นต้องกรอก');
+               return false;
+          }
+
+          var b = document.forms["form1"]["surname"].value;
+          if (b == "") {
+            //alert("Name must be filled out");
+            $('span.surnameerror').removeClass('true').text('ข้อมูลจำเป็นต้องกรอก');
+               return false;
+          }
+
+          var c = document.forms["form1"]["phone"].value;
+          if (c == "") {
+            //alert("Name must be filled out");
+            $('span.phoneerror').removeClass('true').text('ข้อมูลจำเป็นต้องกรอก');
+               return false;
+          }
+
+          var h = document.forms["form1"]["idcard"].value;
+          if (h == "") {
+            //alert("Name must be filled out");
+            $('span.iderror').removeClass('true').text('ข้อมูลจำเป็นต้องกรอก');
+               return false;
+          }
+
+          var i = document.forms["form1"]["yearcar"].value;
+          if (i == "") {
+            //alert("Name must be filled out");
+            $('span.yearcarerror').removeClass('true').text('ข้อมูลจำเป็นต้องกรอก');
+               return false;
+          }
+     
+        }
+
+        $(document).ready(function(){
+          $('#idcard').on('keyup',function(){
+            //if($.trim($(this).val()) != '' && $(this).val().length == 13){
+            if($.trim($(this).val()) != ''){
+              id = $(this).val().replace(/-/g,"");
+              var result = Script_checkID(id);
+              if(result === false){
+                $('span.error').removeClass('true').text('กรุณาใส่หมายเลขบัตรประชาชนให้ถูกต้อง');
+                $('#sendform').prop('disabled', true);
+              }else{
+                $('span.error').addClass('true').text('เลขบัตรถูก');
+                $('#sendform').prop('disabled', false);
+              }
+            }else{
+              $('span.error').removeClass('true').text('');
+            
+            }
+          })
+        });
+
+        function Script_checkID(id){
+            if(! IsNumeric(id)) return false;
+            if(id.substring(0,1)== 0) return false;
+            if(id.length != 13) return false;
+            for(i=0, sum=0; i < 12; i++)
+                sum += parseFloat(id.charAt(i))*(13-i);
+            if((11-sum%11)%10!=parseFloat(id.charAt(12))) return false;
+            return true;
+        }
+
+        function IsNumeric(input){
+            var RE = /^-?(0|INF|(0[1-7][0-7]*)|(0x[0-9a-fA-F]+)|((0|[1-9][0-9]*|(?=[\.,]))([\.,][0-9]+)?([eE]-?\d+)?))$/;
+            return (RE.test(input));
+        }
+        
+        function ValidateEmail(inputText)
+            {
+            var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+            if(inputText.value.match(mailformat))
+            {
+            //alert("Valid email address!");
+            $('span.error2').addClass('true').text('อีเมลถูก');
+            document.form1.Email.focus();
+            return true;
+            }
+            else
+            {
+            //alert("You have entered an invalid email address!");
+            $('span.error2').removeClass('true').text('กรุณาตรวจสอบข้อมูล');
+            document.form1.Email.focus();
+            return false;
+            }
+            }
+        function checkNumber(event) {
+
+        var aCode = event.which ? event.which : event.keyCode;
+
+        if (aCode > 31 && (aCode < 48 || aCode > 57)) return false;
+
+        return true;
+
+        }
+           
+    </script>
+    <script language="javascript" src="js/bootstrap.min.js"></script>
+    <script language="javascript" src="js/moment.js"></script>
+    <script language="javascript" src="js/bootstrap-datetimepicker.min.js"></script>
+    
+</body>
+</html>

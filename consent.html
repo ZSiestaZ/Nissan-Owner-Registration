@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>Nissan Owner Registration</title>
+    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Kanit">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.20/css/uikit.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-datetimepicker.min.css">
+    <link rel="stylesheet" href="css/custom2.css">
+
+
+</head>
+<body onload="getData()">
+
+    <div class="nissanform">
+        <div class="nissanconsentheadtext">
+
+            <b>ข้อตกลงและเงื่อนไขการใช้งาน</b>
+
+        </div> 
+        <div class="nissanwhite">
+            <div class="uk-container uk-padding">
+                <form id="my-form" name="form1" action="https://script.google.com/macros/s/AKfycbzvSCkU_7osgErT3BMSVl51X_IaHEJJ213lSvvERlsKYrP3rtyRcxuhjj1YK93qm6I/exec" method="post">
+
+
+                    <input type="text" id="firstname" name="Firstname" style="display: none;">
+                    <input type="text" id="surname" name="Surname" style="display: none;">
+                    <input type="text" id="phone" name="Phone" style="display: none;">
+                    <input type="text" id="email" name="Email" style="display: none;">
+                    <input type="text" id="idcard" name="Idcard" style="display: none;">
+                    <input type="text" id="yearcar" name="Yearcar" style="display: none;">
+                    <input type="text" id="userid" name="UserId" style="display: none;"> 
+
+
+                    <b><d>ข้าพเจ้าตกลงยินยอมให้ บริษัท นิสสัน มอเตอร์ (ประเทศไทย) จำกัด (“นิสสัน”) ดำเนินการเก็บ รวบรวม ใช้ หรือเปิดเผยข้อมูลส่วนบุคคลของข้าพเจ้า เพื่อวัตถุประสงค์ตามที่ระบุไว้ข้างล่าง ตามที่ข้าพเจ้าได้ทำเครื่องหมาย <img src="images\check_box.png" width="20" height="20"/> ไว้ในช่อง “ยินยอม”</d></b>
+
+                    <div class= "consentchackbox">
+                    
+                
+                    <label class="container"><c>1. เก็บรวบรวม ใช้ และเปิดเผยชื่อ นามสกุล ที่อยู่ หมายเลขโทรศัพท์ หมายเลขโทรสาร อีเมล ข้อมูลรถยนต์ เพื่อนำเสนอข้อมูลผลิตภัณฑ์ของนิสสัน และผลิตภัณฑ์อื่นที่เกี่ยวข้อง รวมถึงการบริการ การขาย โปรโมชั่น แคมเปญ กิจกรรมทางการตลาดและการขาย กิจกรรมเคลมพิเศษ การแจ้งสิทธิใดๆ เกี่ยวกับผลิตภัณฑ์และบริการ ข่าวสาร</c>
+                        <input type="checkbox" name="Consent1" id = "checkBox1" value="1"/>
+                        <span class="checkmark"></span>
+                    </label>
+
+                    <label class="container"><c>2. เก็บรวบรวม ใช้ และเปิดเผยชื่อ นามสกุล ที่อยู่ หมายเลขโทรศัพท์ หมายเลขโทรสาร อีเมล ข้อมูลรถยนต์ ประวัติการใช้รถยนต์ พฤติกรรมการใช้รถยนต์ ผลิตภัณฑ์ หรือบริการ และกิจกรรมอื่นในลักษณะคล้ายกัน เพื่อทำการศึกษาวิจัยและพัฒนาด้านผลิตภัณฑ์ การตลาด การบริการ ตลอดจนการวิเคราะห์ในเชิงสถิติ</c>
+                        <input type="checkbox" name="Consent2" id = "checkBox2" value="1"/>
+                        <span class="checkmark"></span>
+                    </label>
+
+                    <label class="container"><c>3. ให้นิสสันเปิดเผยข้อมูลตามข้อ 1 – ข้อ - ไปยังผู้จำหน่ายที่ได้รับอนุญาต[1] ผู้รับจ้าง หรือผู้ให้บริการภายนอก (ที่มีสถานประกอบการหรือมีการประมวลผลในประเทศไทย) ซึ่งเป็นผู้ประมวลผลข้อมูลให้กับนิสสัน เพื่อบรรลุวัตถุประสงค์กิจกรรมตามที่ระบุไว้ในข้อ 1 – ข้อ - ข้างต้น</c>
+                        <input type="checkbox" name="Consent3" id = "checkBox3" value="1"/>
+                        <span class="checkmark"></span>
+                    </label>
+                    
+                    <label class="container"><c>4. เก็บรวบรวม ใช้ และเปิดเผยชื่อ นามสกุล ที่อยู่ หมายเลขโทรศัพท์ หมายเลขโทรสาร อีเมล ข้อมูลรถยนต์ ประวัติการใช้รถยนต์ เพื่อสำรวจความพึงพอใจในรถยนต์นิสสัน ผลิตภัณฑ์อื่นของนิสสัน หรือบริการของนิสสัน</c>
+                        <input type="checkbox" name="Consent4" id = "checkBox4" value="1"/>
+                        <span class="checkmark"></span>
+                    </label>
+
+                    <label class="container"><c>5. ให้นิสสันเปิดเผยข้อมูลตามข้อ 1 – ข้อ 3 ไปยังผู้รับจ้าง หรือผู้ให้บริการภายนอก (ที่มีสถานประกอบการหรือมีการประมวลผลในต่างประเทศ) ซึ่งเป็นผู้ประมวลผลข้อมูลให้กับนิสสัน เพื่อบรรลุวัตถุประสงค์กิจกรรมตามที่ระบุไว้ในข้อ 1 – ข้อ 3 ข้างต้น</c>
+                        <input type="checkbox" name="Consent5" id = "checkBox5" value="1"/>
+                        <span class="checkmark"></span>
+                    </label>
+
+                    <label class="container"><c>6. ให้นิสสันเปิดเผยข้อมูลตามข้อ 1 – ข้อ 3 ให้แก่บริษัทในเครือและในกลุ่มของนิสสัน[2] ที่มีสถานประกอบการอยู่ในประเทศไทยได้ เพื่อให้บรรลุวัตถุประสงค์ที่ระบุไว้ในข้อ 1 – ข้อ 3 ข้างต้น</c>
+                        <input type="checkbox" name="Consent6" id = "checkBox6" value="1"/>
+                        <span class="checkmark"></span>
+                    </label>
+
+                    <label class="container"><c>7. ให้นิสสันเปิดเผยข้อมูลตามข้อ 1 – ข้อ 3 ให้แก่บริษัทในเครือและในกลุ่มของนิสสัน[3] ที่มีสถานประกอบการอยู่ในต่างประเทศได้ เพื่อให้บรรลุวัตถุประสงค์ที่ระบุไว้ในข้อ 1 – ข้อ 3 ข้างต้น</c>
+                        <input type="checkbox" name="Consent7" id = "checkBox7" value="1"/>
+                        <span class="checkmark"></span>
+                    </label>
+
+                    <label class="container"><c>8. ให้นิสสันเปิดเผยและโอนข้อมูลตามข้อ 1 – ข้อ 3 ให้แก่บริษัท นิสสัน มอเตอร์ จำกัด (ประเทศญี่ปุ่น) ซึ่งเป็นบริษัทแม่ของนิสสันเพื่อการบริหารจัดการให้บรรลุวัตถุประสงค์ของกิจกรรมตามที่ระบุไว้ในข้อ 1 – ข้อ 3 ข้างต้น</c>
+                        <input type="checkbox" name="Consent8" id = "checkBox8" value="1"/>
+                        <span class="checkmark"></span>
+                    </label>
+
+                    <hr class= "line">
+
+                    <d>โปรดศึกษารายละเอียด "ผู้จัดจำหน่ายที่ได้รับอนุญาติ" ได้ที่</d>
+                    <u><a href="https://www.nissan.co.th/">www.nissan.co.th</a></u>
+
+                    <div class="button">
+                        <button id="backform" type="submit" onclick="getback()">
+                            ยกเลิก
+                        </button>
+                        <button id="sendform" type="submit">
+                            ยอมรับ
+                        </button>
+
+                    </div>
+
+                   
+                    </div>
+                </form>
+            </div>
+        </div>
+        <span class="nissanhd bottomtag"><img src="images/nissan-bottomtx.png" /></span>
+    </div>
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.20/js/uikit.min.js"></script>
+
+    <script>
+
+        function getData()
+        {   
+
+            var url_string = window.location.href;
+            var url = new URL(url_string);
+            var Firstname = url.searchParams.get("Firstname");
+            var Surname = url.searchParams.get("Surname");
+            var Phone = url.searchParams.get("Phone");
+            var Email = url.searchParams.get("Email");
+            var Idcard = url.searchParams.get("Idcard");
+            var Yearcar = url.searchParams.get("Yearcar");
+            var UserId = url.searchParams.get("UserId")
+
+            document.getElementById("firstname").value = Firstname;
+            document.getElementById("surname").value = Surname;
+            document.getElementById("phone").value = Phone;
+            document.getElementById("email").value = Email;
+            document.getElementById("idcard").value = Idcard;
+            document.getElementById("yearcar").value = Yearcar;
+            document.getElementById("userid").value = UserId;
+        }
+
+        function getback(){
+
+            window.location.replace("https://www.audience-iq.com/nissan-owner-registration/index.html")
+
+        }
+
+        </script>
+
+    <script>
+
+        window.addEventListener("load", function() {
+            const form = document.getElementById('my-form');
+            form.addEventListener("submit", function(e) {
+                e.preventDefault();
+                const data = new FormData(form);
+                const action = e.target.action;
+            fetch(action, {
+                method: 'POST',
+                body: data,
+            })
+            .then(() => {
+            window.location.replace("https://www.audience-iq.com/nissan-owner-registration/thankyou.html");
+            })
+      });
+    });
+
+    </script>
+    
+
+</body>
+</html>
